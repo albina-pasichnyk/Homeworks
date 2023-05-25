@@ -15,32 +15,20 @@ string S is made only of the following characters: '^', 'v, '< and/or'>'.
 """
 
 
-def counting_rotation(arrows: str):
+def counting_rotation(arrows: str) -> int:
     """
     Function counting_rotation receives a string denoting the directions of the arrows and then returns the minimum
     number of arrows that must be rotated to make them all point in the same direction
     :param arrows: string with arrows
     :return: int - amount of minimum number of arrows to be rotated
     """
-    up_counter = 0
-    down_counter = 0
-    left_counter = 0
-    right_counter = 0
+    arrows_dict = {}
     for each in arrows:
-        if each == '^':
-            up_counter += 1
-        elif each == 'v':
-            down_counter += 1
-        elif each == '<':
-            left_counter += 1
-        elif each == '>':
-            right_counter += 1
-    max_counter = max(up_counter, down_counter, left_counter, right_counter)
-    rotations = len(arrows) - max_counter
-    return rotations
+        arrows_dict[each] = arrows.count(each)
+    return len(arrows) - max(arrows_dict.values())
 
 
 if __name__ == "__main__":
     assert counting_rotation('^vv<v') == 2  # Check for unequal amount of arrows to be rotated in string
     assert counting_rotation('v>>>vv') == 3  # Check for equal amount of arrows to be rotated in string
-    assert counting_rotation('<<<') == 0 # Check for none of arrows to be rotated in string
+    assert counting_rotation('<<<') == 0  # Check for none of arrows to be rotated in string

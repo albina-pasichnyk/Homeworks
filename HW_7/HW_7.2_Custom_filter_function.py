@@ -5,7 +5,7 @@ Functions must be able to work with integers, floats, and strings as elements of
 """
 
 
-def custom_filter(callback, sequence):
+def custom_filter(callback, sequence: list or set or tuple, ) -> object:
     """
     Function custom_filter is used to filter elements based on specific conditions. it returns a sequence from those 
     elements of iterable for which function returns True. 
