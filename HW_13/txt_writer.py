@@ -1,4 +1,4 @@
-from HW_13.writer_interface import IWriter
+from writer_interface import IWriter
 
 
 class TxtWriter(IWriter):

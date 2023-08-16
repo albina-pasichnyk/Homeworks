@@ -1,5 +1,5 @@
-from HW_11.I_Radar import IRadar
-from HW_11.I_Anti_missile_defense import IHittingTarget
+from I_Radar import IRadar
+from I_Anti_missile_defense import IHittingTarget
 
 
 # Inheritance

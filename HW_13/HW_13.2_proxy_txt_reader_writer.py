@@ -1,7 +1,7 @@
-from HW_13.reader_interface import IReader
-from HW_13.txt_reader import TxtReader
-from HW_13.txt_writer import TxtWriter
-from HW_13.writer_interface import IWriter
+from reader_interface import IReader
+from txt_reader import TxtReader
+from txt_writer import TxtWriter
+from writer_interface import IWriter
 
 
 class TxtProxyReaderWriter(IReader, IWriter):
@@ -33,9 +33,9 @@ class TxtProxyReaderWriter(IReader, IWriter):
             self.__writer.write_file(browser_version)
 
 
-if __name__ == '__main__':
-    txt_proxy = TxtProxyReaderWriter('13_2_config_file.txt')
-    data = txt_proxy.read_file()
-    new_data = txt_proxy.read_file()
-    txt_proxy.write_file('13.0')
-    txt_proxy.read_file()
+# if __name__ == '__main__':
+#     txt_proxy = TxtProxyReaderWriter('13_2_config_file.txt')
+#     data = txt_proxy.read_file()
+#     new_data = txt_proxy.read_file()
+#     txt_proxy.write_file('13.0')
+#     txt_proxy.read_file()

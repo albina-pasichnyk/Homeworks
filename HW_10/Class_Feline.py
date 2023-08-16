@@ -1,4 +1,4 @@
-from HW_10.Class_Mammal import Mammal
+from Class_Mammal import Mammal
 
 
 class Feline(Mammal):
