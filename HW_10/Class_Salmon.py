@@ -1,4 +1,4 @@
-from HW_10.Class_Fish import Fish
+from Class_Fish import Fish
 
 
 class Salmon(Fish):

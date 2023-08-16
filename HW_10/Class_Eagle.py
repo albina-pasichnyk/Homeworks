@@ -1,4 +1,4 @@
-from HW_10.Class_Bird import Bird
+from Class_Bird import Bird
 
 
 class Eagle(Bird):

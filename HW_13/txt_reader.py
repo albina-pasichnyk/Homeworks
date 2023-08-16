@@ -1,4 +1,4 @@
-from HW_13.reader_interface import IReader
+from reader_interface import IReader
 
 
 class TxtReader(IReader):
